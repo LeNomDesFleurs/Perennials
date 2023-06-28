@@ -1,4 +1,3 @@
-
 let axiom = "F";
 let sentence = axiom;
 let rules = [];
@@ -13,7 +12,6 @@ let len = 100; // Longueur initiale du segment
 let angle;
 
 function generate() {
-  frameRate(1);
   len *= 0.5; // Réduire la longueur du segment à chaque itération
   let nextSentence = "";
   for (let i = 0; i < sentence.length; i++) {
@@ -41,7 +39,6 @@ function turtle() {
   translate(width / 2, height);
   stroke(255, 100);
   for (let i = 0; i < sentence.length; i++) {
-    wait(100);
     let current = sentence.charAt(i);
     if (current == "F") {
       line(0, 0, 0, -len);
@@ -68,6 +65,3 @@ function setup() {
   let button = createButton("Générer");
   button.mousePressed(generate);
 }
-
-
-
